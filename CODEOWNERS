@@ -10,4 +10,7 @@
 #*.js    @octocat @github/js
 
 # You can also use email addresses if you prefer.
-#docs/*  docs@example.com
+apis/poi  @mcpfe
+apis/trips @mcpfe
+apis/user-java @mcpfe
+apis/userprofile @mcpfe
