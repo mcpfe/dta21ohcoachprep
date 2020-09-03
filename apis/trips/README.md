@@ -14,7 +14,7 @@ To run the server, follow these simple steps:
 go run main.go
 ```
 
-## Testing
+## Testing - and testing protection now!
 
 To run unit tests, execute:
 
