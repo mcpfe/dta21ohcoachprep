@@ -23,3 +23,11 @@ jobs:
       run: dotnet build --configuration Release --no-restore ./apis/poi/poi.sln
     - name: Test
       run: dotnet test --no-restore --verbosity normal ./apis/poi/tests/UnitTests/UnitTests.csproj
+    - uses: azure/docker-login@v1
+      with:
+        login-server: openhackxr671i48acr.azurecr.io
+        username: ${{ secrets.ACR_USERNAME }}
+        password: ${{ secrets.ACR_PASSWORD }}
+    - run: |
+        docker build ./apis/poi/web/Dockerfile -t openhackxr671i48acr.azurecr.io/devopsoh/api-poi:${{ GITHUB_RUN_NUMBER }}
+        docker push openhackxr671i48acr.azurecr.io/devopsoh/api-poi:${{ GITHUB_RUN_NUMBER }} 
