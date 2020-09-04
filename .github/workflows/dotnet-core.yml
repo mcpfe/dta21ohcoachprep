@@ -2,9 +2,9 @@ name: .NET Core
 
 on:
   push:
-    branches: [ master/apis/poi ]
+    branches: [ master/apis/poi/** ]
   pull_request:
-    branches: [ master/apis/poi ]
+    branches: [ master/apis/poi/** ]
 
 jobs:
   build:
