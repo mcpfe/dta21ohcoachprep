@@ -18,7 +18,7 @@ jobs:
       with:
         dotnet-version: 3.1.301
     - name: Install dependencies
-      run: dotnet restore ./apis/poi/web/poi.csproj
+      run: dotnet restore ./apis/poi/poi.sln
     - name: Build
       run: dotnet build --configuration Release --no-restore ./apis/poi/poi.sln
     - name: Test
