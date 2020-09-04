@@ -29,5 +29,5 @@ jobs:
         username: ${{ secrets.ACR_USERNAME }}
         password: ${{ secrets.ACR_PASSWORD }}
     - run: |
-        docker build ./apis/poi/web/Dockerfile -t openhackxr671i48acr.azurecr.io/devopsoh/api-poi:${{ GITHUB_RUN_NUMBER }}
-        docker push openhackxr671i48acr.azurecr.io/devopsoh/api-poi:${{ GITHUB_RUN_NUMBER }} 
+        docker build ./apis/poi/web/Dockerfile -t openhackxr671i48acr.azurecr.io/devopsoh/api-poi:${{ github.GITHUB_RUN_NUMBER }}
+        docker push openhackxr671i48acr.azurecr.io/devopsoh/api-poi:${{ github.GITHUB_RUN_NUMBER }} 
